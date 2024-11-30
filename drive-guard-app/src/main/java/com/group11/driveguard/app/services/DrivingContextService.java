@@ -13,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
+import org.springframework.retry.support.RetryTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
@@ -25,6 +26,7 @@ import java.util.Objects;
 public class DrivingContextService {
 
     private final RestClient restClient;
+    private final RetryTemplate retryTemplate;
 
     @Value("${config.map-api-url}")
     private String MAP_API_BASE_URL;
@@ -68,32 +70,38 @@ public class DrivingContextService {
 
         String uri = baseUrl + locationQuery + "&current=" + currentWeatherQuery + timeZone;
 
-        final var response = restClient.get()
-            .uri(uri)
-            .accept(MediaType.APPLICATION_JSON)
-            .exchange((clientRequest, clientResponse) -> {
-                if (clientResponse.getStatusCode().isError()) {
-                    log.error("URI: {}", uri);
-                    log.error("Response Body: {}", clientResponse.bodyTo(String.class));
-                    WeatherError error = clientResponse.bodyTo(WeatherError.class);
-                    if (error != null && error.error()) {
-                        log.error("Error getting weather from coordinates. Status Code: %s\n Message %s\n Reason: %s".formatted(
-                            clientResponse.getStatusCode(),
-                            clientResponse.getStatusText(),
-                            error.reason()
-                        ));
-                        throw new UnexpectedMapApiException("Error getting weather from coordinates. Reason: %s".formatted(error.reason()));
+        final var weather = retryTemplate.execute(context -> {
+            if (context.getRetryCount() > 1) {
+                log.warn("Retrying ({} try) request due to error: {}", context.getRetryCount(), context.getLastThrowable().getMessage());
+            }
+            final var response = restClient.get()
+                .uri(uri)
+                .accept(MediaType.APPLICATION_JSON)
+                .exchange((clientRequest, clientResponse) -> {
+                    if (clientResponse.getStatusCode().isError()) {
+                        log.error("URI: {}", uri);
+                        log.error("Response Body: {}", clientResponse.bodyTo(String.class));
+                        WeatherError error = clientResponse.bodyTo(WeatherError.class);
+                        if (error != null && error.error()) {
+                            log.error("Error getting weather from coordinates. Status Code: %s\n Message %s\n Reason: %s".formatted(
+                                clientResponse.getStatusCode(),
+                                clientResponse.getStatusText(),
+                                error.reason()
+                            ));
+                            throw new UnexpectedMapApiException("Error getting weather from coordinates. Reason: %s".formatted(error.reason()));
+                        }
                     }
-                }
-                return Objects.requireNonNull(clientResponse.bodyTo(CurrentWeather.class));
-            });
+                    return Objects.requireNonNull(clientResponse.bodyTo(CurrentWeather.class));
+                });
 
-        if (response.current() == null) {
-            log.error("Error getting weather from coordinates. Current weather is null.");
-            throw new UnexpectedMapApiException("Error getting weather from coordinates. Current weather is null.");
-        }
+            if (response.current() == null) {
+                log.error("Error getting weather from coordinates. Current weather is null.");
+                throw new UnexpectedMapApiException("Error getting weather from coordinates. Current weather is null.");
+            }
+            return response;
+        });
 
-        return Weather.fromCurrentWeather(response);
+        return Weather.fromCurrentWeather(weather);
     }
 
     public double getDistanceBetweenCoordinates(Location locationOne, Location locationTwo) {
