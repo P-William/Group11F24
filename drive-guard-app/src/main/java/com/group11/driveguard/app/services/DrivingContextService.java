@@ -13,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
+import org.springframework.retry.annotation.Retryable;
 import org.springframework.retry.support.RetryTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
@@ -59,6 +60,7 @@ public class DrivingContextService {
         return callApi(uri, location, Road.class);
     }
 
+    @Retryable
     public Weather getWeatherFromCoordinates(Location location) {
         String baseUrl = "https://api.open-meteo.com/v1/forecast";
         String locationQuery = "?latitude=%s&longitude=%s".formatted(location.latitude(), location.longitude());
