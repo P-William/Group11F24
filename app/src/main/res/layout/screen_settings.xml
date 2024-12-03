@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/darkMode"
+        android:layout_width="297dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="57dp"
+        android:scrollbarSize="8sp"
+        android:text="@string/dark_mode"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/notification_switch"
+        android:layout_width="297dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="228dp"
+        android:layout_marginEnd="57dp"
+        android:scrollbarSize="8sp"
+        android:text="@string/notifications"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/data_switch"
+        android:layout_width="297dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="57dp"
+        android:scrollbarSize="8sp"
+        android:text="@string/data_collection"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include layout="@layout/button_deck" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Settings"
+        app:titleTextColor="@color/textColorPrimary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

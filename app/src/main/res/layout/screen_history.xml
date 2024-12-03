@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navy"
+        app:title="Average Score and History"
+        app:titleTextColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewAverageScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="100sp"
+        android:textColor="@color/navy"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/textViewAverageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Total Average Score"
+        android:textSize="20sp"
+        android:textColor="@color/textColorSecondary"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAverageScore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textViewTripHistoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trip History"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/textColorSecondary"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAverageLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTripHistory"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:layout_marginBottom="16dp"
+        android:clipToPadding="false"
+        android:overScrollMode="ifContentScrolls"
+        android:padding="16dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTripHistoryLabel"
+        app:layout_constraintVertical_bias="0.075"/>
+
+    <include
+        layout="@layout/button_deck"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,10 +8,10 @@
     <color name="darkGrey">#3b3b3b</color>
 
     <color name="primaryColor">#3F51B5</color>
-    <color name="backgroundColor">#FFFFFFFF</color>
-    <color name="dialogBackground">#FFFFFFFF</color>
-    <color name="iconColor">#FFFFFFFF</color>
-    <color name="profileIconColor">#FF000000</color>
-    <color name="textColorPrimary">#FFFFFFFF</color>
-    <color name="textColorSecondary">#FF000000</color>
+    <color name="backgroundColor">#141414</color>
+    <color name="dialogBackground">#3b3b3b</color>
+    <color name="iconColor">#c0c0c0</color>
+    <color name="profileIconColor">#FFFFFFFF</color>
+    <color name="textColorPrimary">#c0c0c0</color>
+    <color name="textColorSecondary">#FFFFFFFF</color>
 </resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navy"
+        app:title="Driving Suggestions"
+        app:titleTextColor="@color/textColorPrimary"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewAverageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/what_you_can_do_to_improve_your_driving"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+
+        android:id="@+id/suggestionOne"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="6dp"
+        android:text="@string/turn_slow"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAverageLabel" />
+
+    <TextView
+
+        android:id="@+id/suggestionOne3"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="6dp"
+        android:text="@string/start_slow"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAverageLabel" />
+
+    <TextView
+
+        android:id="@+id/suggestionOne2"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="6dp"
+        android:text="@string/brake_slow"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAverageLabel" />
+
+    <TextView
+
+        android:id="@+id/suggestionOne4"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="6dp"
+        android:text="@string/drive_slow2"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAverageLabel" />
+
+    <TextView
+
+        android:id="@+id/suggestionOne5"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="6dp"
+        android:text="@string/drive_slow"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAverageLabel" />
+
+    <include
+        layout="@layout/button_deck"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/newUsernameInput"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Enter new username"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="16dp">
+
+        <Button
+            style="@style/primary_button"
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel" />
+
+        <Button
+            style="@style/primary_button"
+            android:id="@+id/okButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="OK" />
+
+    </LinearLayout>
+</LinearLayout>

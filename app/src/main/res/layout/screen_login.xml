@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@android:color/transparent"
+    android:background="@color/backgroundColor">
+
+    <include layout="@layout/button_deck"/>
+
+    <Button
+        style="@style/primary_button"
+        android:id="@+id/buttonLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="@string/login"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputPasswordLogin" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputPasswordLogin"
+        android:layout_width="394dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/password"
+        android:textColorHint="@color/textColorSecondary"
+        app:hintTextColor="@color/primaryColor"
+        app:cursorColor="@color/primaryColor"
+        app:boxStrokeColor="@color/primaryColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputUsernameLogin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPasswordLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputUsernameLogin"
+        android:layout_width="394dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:hint="@string/Username"
+        android:textColorHint="@color/textColorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:hintTextColor="@color/primaryColor"
+        app:cursorColor="@color/primaryColor"
+        app:boxStrokeColor="@color/primaryColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextUsernameLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColorHint="@color/textColorSecondary" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navy"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Login"
+        app:titleTextColor="@color/textColorPrimary"
+        tools:layout_editor_absoluteX="0dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

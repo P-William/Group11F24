@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:gravity="center"
+    android:background="@drawable/background_rounded"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/delete_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are You Sure You Wish To Delete Your Account?"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textColor="@color/textColorSecondary" />
+
+    <TextView
+        android:id="@+id/delete_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Password To Confirm"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/textColorSecondary"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/password_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:visibility="gone" />
+
+    <!-- Button Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/yes_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/primary_button"
+            android:background="@drawable/shape_green_round"
+            android:text="Yes"
+            android:layout_marginEnd="10dp"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/no_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/primary_button"
+            android:background="@drawable/shape_red_round"
+            android:text="No"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- Delete Button -->
+    <Button
+        android:id="@+id/delete_button"
+        style="@style/primary_button"
+        android:background="@drawable/shape_red_round"
+        android:text="DELETE"
+        android:textSize="20sp"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <include layout="@layout/button_deck" />
+
+    <ImageView
+        android:id="@+id/userIcon"
+        android:layout_width="157dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="572dp"
+        android:contentDescription="@string/profile_picture"
+        android:src="@drawable/icon_profiles"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/usernameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="528dp"
+        android:text="@string/Username"
+        android:textAlignment="center"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/signupButton"
+        style="@style/primary_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="396dp"
+        android:text="@string/signup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/changeUsernameButton"
+        style="@style/primary_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="276dp"
+        android:text="Change Username"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/loginButton"
+        style="@style/primary_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="452dp"
+        android:text="@string/login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/changePasswordButton"
+        style="@style/primary_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="216dp"
+        android:text="Change Password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        style="@style/primary_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="340dp"
+        android:text="@string/logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="@color/primaryColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Profile"
+        app:titleTextColor="@color/textColorPrimary"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        style="@style/primary_button"
+        android:id="@+id/main_delete_button"
+        android:layout_width="185dp"
+        android:layout_height="64dp"
+        android:background="@drawable/shape_red_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginStart="200dp"
+        android:text="@string/delete_account"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="759dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

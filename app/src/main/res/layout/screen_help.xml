@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/button_deck" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="@color/primaryColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Help"
+        app:titleTextColor="@color/textColorPrimary"
+        tools:layout_editor_absoluteX="91dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/faq"
+        android:textSize="30sp"
+        android:textColor="@color/textColorSecondary"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="200dp"/>
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/faq4_body"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="200dp"
+        android:text="@string/support_email"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="@color/textColorSecondary"
+        />
+
+    <TextView
+        android:id="@+id/faq1_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/faq1_header"
+        android:textSize="18sp"
+        android:textColor="@color/textColorSecondary"
+        app:layout_constraintTop_toTopOf="@+id/faq1_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/faq1_button"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="20dp" />
+
+    <ImageView
+        android:id="@+id/faq1_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/profileIconColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/icon_arrow_down" />
+
+    <TextView
+        android:id="@+id/faq1_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/faq1_heading"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/faq1_body"
+        android:textColor="@color/textColorSecondary"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="166dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/faq2_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/faq2_header"
+        android:textSize="18sp"
+        android:textColor="@color/textColorSecondary"
+        app:layout_constraintTop_toTopOf="@+id/faq2_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/faq2_button"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="20dp" />
+
+    <ImageView
+        android:id="@+id/faq2_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/profileIconColor"
+        app:layout_constraintTop_toBottomOf="@id/faq1_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/icon_arrow_down" />
+
+    <TextView
+        android:id="@+id/faq2_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/faq2_heading"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/faq2_body"
+        android:textColor="@color/textColorSecondary"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/faq3_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/faq3_header"
+        android:textSize="18sp"
+        android:textColor="@color/textColorSecondary"
+        app:layout_constraintTop_toTopOf="@+id/faq3_button"
+        app:layout_constraintBottom_toBottomOf="@+id/faq3_button"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="20dp" />
+
+    <ImageView
+        android:id="@+id/faq3_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/profileIconColor"
+        app:layout_constraintTop_toBottomOf="@id/faq2_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/icon_arrow_down" />
+
+    <TextView
+        android:id="@+id/faq3_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/faq3_heading"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/faq3_body"
+        android:textColor="@color/textColorSecondary"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/faq4_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/faq4_header"
+        android:textSize="18sp"
+        android:textColor="@color/textColorSecondary"
+        app:layout_constraintTop_toTopOf="@+id/faq4_button"
+        app:layout_constraintBottom_toBottomOf="@+id/faq4_button"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="20dp" />
+
+    <ImageView
+        android:id="@+id/faq4_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/profileIconColor"
+        app:layout_constraintTop_toBottomOf="@id/faq3_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/icon_arrow_down" />
+
+    <TextView
+        android:id="@+id/faq4_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/faq4_heading"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/faq4_body"
+        android:textColor="@color/textColorSecondary"
+        android:visibility="gone"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

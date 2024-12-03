@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="3dp"
+    style="@style/event_item"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <TextView
+        android:id="@+id/eventTypeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Driving Event: "
+        android:textSize="16sp"
+        android:textColor="@color/textColorPrimary"/>
+
+    <TextView
+        android:id="@+id/eventPointTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Points Deducted: "
+        android:textSize="16sp"
+        android:textColor="@color/textColorPrimary"/>
+
+    <TextView
+        android:id="@+id/eventTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time: "
+        android:textSize="16sp"
+        android:textColor="@color/textColorPrimary"/>
+
+</LinearLayout>

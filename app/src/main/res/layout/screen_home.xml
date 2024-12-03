@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".activities.HomeScreen">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/button_deck"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/score_message"
+        android:layout_width="222dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="96dp"
+        android:text="@string/your_average_score"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="79dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="96dp"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+
+        android:id="@+id/imageView"
+        android:layout_width="374dp"
+        android:layout_height="403dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="244dp"
+        android:backgroundTint="@color/navy"
+        android:src="@drawable/logo_drive_guard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/weather"
+        android:layout_width="135dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginBottom="656dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icon_sun" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="208dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="179dp"
+        android:layout_marginBottom="668dp"
+        android:textSize="30sp"
+        android:textColor="@color/textColorSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/greeting"
+        android:layout_width="229dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="700dp"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="@color/navy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Dashboard"
+        app:titleTextColor="@color/textColorPrimary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/background_rounded"
+    android:padding="0dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDriverScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navy"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Trip Summary"
+        app:titleTextColor="@color/textColorPrimary" />
+
+    <TextView
+        android:id="@+id/textViewDriverScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text=""
+        android:textColor="@color/navy"
+        android:textSize="100dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarDriverScore" />
+
+    <TextView
+        android:id="@+id/textViewScoreLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Your Score for This Trip"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDriverScore" />
+
+    <TextView
+        android:id="@+id/textViewDeductions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="36dp"
+        android:text="Deductions:"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewScoreLabel" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTripDeductions"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="16dp"
+        android:clipToPadding="false"
+        android:overScrollMode="ifContentScrolls"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDeductions"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <TextView
+        android:id="@+id/textViewAttributes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="20dp"
+        android:text="Attributes: "
+        android:textColor="@color/textColorSecondary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewTripDeductions" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAttributes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAttributes">
+
+        <!-- Predefined rows -->
+        <TextView
+            android:id="@+id/startTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Time: "
+            android:textColor="@color/textColorSecondary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/endTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End Time: "
+            android:textColor="@color/textColorSecondary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/startLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Location: "
+            android:textColor="@color/textColorSecondary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/endLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End Location: "
+            android:textColor="@color/textColorSecondary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distance: "
+            android:textColor="@color/textColorSecondary"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

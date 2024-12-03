@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name" translatable="false">DriveGuard</string>
+    <string name="preferences_file">preferences</string>
+</resources>

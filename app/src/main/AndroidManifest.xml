@@ -2,24 +2,101 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- To request foreground location access, declare one of these permissions. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <!-- Required only when requesting background location access on Android 10 (API level 29) -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/drive_guard_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/drive_guard_icon_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DriveGuard"
+        android:theme="@style/AppTheme"
         tools:targetApi="31">
+
+
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.TripScreen"
+            android:exported="false"
+            android:label="@string/title_activity_start_trip" />
+        <activity
+            android:name=".activities.HomeScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".activities.SettingsScreen"/>
+        <activity
+            android:name=".activities.SignUpScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.driveguard.SIGNUP" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.LoginScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.driveguard.LOGIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.ProfileScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.ScoreDialog"
+            android:exported="true"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.HelpScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.HistoryScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".activities.SuggestionScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
         </activity>
     </application>
 
